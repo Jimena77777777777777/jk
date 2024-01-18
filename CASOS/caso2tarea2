@@ -14,7 +14,7 @@
         <form action="">
             <table border="0" cellspacing = "0" align="center" cellspadding ="0">
                 <tr>
-                    <td>Empelado</td>
+                    <td>Empleado</td>
                     <td><input type="text" name="txtEmpleado"></td>
                 </tr>
                 <tr>
@@ -34,13 +34,15 @@
                 $empleado = $_GET['txtEmpleado'];
                 $horas = $_GET['txtHoras'];
                 $tarifa = $_GET['txtTarifa'];
-
+                
                 //sueldo bruto
                 $sueldo = $horas * $tarifa;
                 define ("RMV",1025);
                 
                 //essalud
                 //si el empleado gana la RMV 1025 solo en esos casos aplica
+                $essalud = $sueldo * ;
+
                 //afp 
                 //sueldo neto sueldo bruto - essalud - afp
 
@@ -56,7 +58,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>horas trabajadas</td>
+                    <td>Horas trabajadas</td>
                     <td>
                         <?php
                         echo $horas;
@@ -100,7 +102,7 @@
 
     
     <footer>
-        <h6>Wendy te engaño xd ahhahahhahah</h6>
+        <h6>selin flores</h6>
     </footer>
 </body>
 </html>

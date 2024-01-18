@@ -8,21 +8,22 @@
 </head>
 <body>
     <header>
+   
         <h3>PAGO DE EMPLEADOS</h3>
     </header>
     <section>
         <form action="">
             <table border="0" cellspacing = "0" align="center" cellspadding ="0">
                 <tr>
-                    <td>Empelado</td>
+                    <td>Empleado:  </td>
                     <td><input type="text" name="txtEmpleado"></td>
                 </tr>
                 <tr>
-                    <td>Horas trabajadas</td>
+                    <td>Horas trabajadas:  </td>
                     <td><input type="text" name="txtHoras"></td>
                 </tr>
                 <tr>
-                    <td>Tarifa por Hora</td>
+                    <td>Tarifa por Hora:  </td>
                     <td><input type="text" name="txtTarifa"></td>
                 </tr>
                 <tr>
@@ -35,62 +36,87 @@
                 $horas = $_GET['txtHoras'];
                 $tarifa = $_GET['txtTarifa'];
 
-                //sueldo bruto
+                /*  sueldo bruto  */
                 $sueldo = $horas * $tarifa;
                 define ("RMV",1025);
+
+                /* essalud */
                 
-                //essalud
-                //si el empleado gana la RMV 1025 solo en esos casos aplica
-                //afp 
-                //sueldo neto sueldo bruto - essalud - afp
+                $essaludes= $sueldo * 0.9;
+                $essaludfin= $sueldo - $essaludes;
 
 
+               /* define ("Essalud", 0.9);
+               if ($sueldo > $RMV){
+                    $essaludesc= $sueldo*$RMV;
+                    echo"$essaludesc";
+               } elseif ($sueldo <$RMV) {
+                    echo "no hay descuentp";
+               }*/
+               
+               /* descuento AFP */
+               $AFP=$sueldo*0.13;
+
+               /* sueldo neto */
+               $descneto= $sueldo-$essaludfin-$AFP;
 
                 ?>
                 <tr>
-                    <td>Empleado</td>
+                    <td>Empleado: </td>
                     <td>
-                        <?php
+                    <?php
                         echo $empleado;
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>horas trabajadas</td>
+                    <td>Horas trabajadas: </td>
                     <td>
                         <?php
-                        echo $horas;
-                        ?>
+                      echo $horas;
+                      ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>Tarifa por hora</td>
+                    <td>Tarifa por hora: </td>
                     <td>
-                        <?php
-                        echo $tarifa;
-                        ?>
+                    <?php
+                      echo $tarifa;
+                      ?>
                     </td>
                 </tr>
                 
                 <tr>
-                    <td>Sueldo bruto</td>
+                    <td>Sueldo bruto: </td>
                     <td>
-                        <?php
+                    <?php
                         echo "S/.".$sueldo;
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>Descuento Essalud</td>
-                    <td></td>
+                    <td>Desct Essalud: </td>
+                    <td>
+                    <?php
+                        echo $essaludfin;
+                        ?>
+                    </td>
                 </tr>
                 <tr>
-                    <td>descuento AFP</td>
-                    <td></td>
+                    <td>Descuento AFP: </td>
+                    <td>
+                    <?php
+                        echo $AFP;
+                        ?>
+                    </td>
                 </tr>
                 <tr>
-                    <td>Sueldo Neto</td>
-                    <td></td>
+                    <td>Sueldo Neto: </td>
+                    <td>
+                        <?php
+                        echo $descneto;
+                        ?>
+                    </td>
                 </tr>
                 
 
@@ -100,7 +126,7 @@
 
     
     <footer>
-        <h6>Wendy te engaño xd ahhahahhahah</h6>
+        <h6>selin flores</h6>
     </footer>
 </body>
 </html>

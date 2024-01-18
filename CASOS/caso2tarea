@@ -11,10 +11,10 @@
         <h3>PAGO DE EMPLEADOS</h3>
     </header>
     <section>
-        <form action="">
+        
             <table border="0" cellspacing = "0" align="center" cellspadding ="0">
                 <tr>
-                    <td>Empelado</td>
+                    <td>Empleado</td>
                     <td><input type="text" name="txtEmpleado"></td>
                 </tr>
                 <tr>
@@ -100,7 +100,7 @@
 
     
     <footer>
-        <h6>Wendy te engaño xd ahhahahhahah</h6>
+        <h6>selin</h6>
     </footer>
 </body>
 </html>
