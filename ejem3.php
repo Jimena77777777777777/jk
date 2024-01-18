@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    
+
+    </header>
+    <section>
+    <?php
+
+        for($i=1; $i<=50; $i++) {
+            ?>
+            <p> oportunidad que le dio dani a wen <?php echo $i;?></p>
+            <?php
+            
+    }
+    ?>
+
+    </section>
+
+</body>
+</html>
