@@ -46,14 +46,7 @@
                 $essaludfin= $sueldo - $essaludes;
 
 
-               /* define ("Essalud", 0.9);
-               if ($sueldo > $RMV){
-                    $essaludesc= $sueldo*$RMV;
-                    echo"$essaludesc";
-               } elseif ($sueldo <$RMV) {
-                    echo "no hay descuentp";
-               }*/
-               
+                             
                /* descuento AFP */
                $AFP=$sueldo*0.13;
 
