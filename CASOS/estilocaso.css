@@ -6,14 +6,33 @@
     .boton{
         width: 200px;
         height: 40px;
-        color: bisque;
+        color: rgb(255, 196, 239);
         background-color: black;
         border: none;
         border-radius: 5px;
+        animation: sacudir 4s infinite;
+    }
+@keyframes sacudir{
+    10%{
+        transform: scale(1.5) rotate(5deg);
     }
 
+    20% {
+        transform: scale(1.05) rotate(-5deg);
+    }
 
+    30%{
+        transform: scale(1.05) rotate(5deg);
+    }
 
-
-
+    40%{
+        transform:none;
+    }
+        
+    }
 }
+
+
+
+
+
