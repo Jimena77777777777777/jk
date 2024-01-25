@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VENTA</title>
+    <link rel="stylesheet" href="estilocaso.css">
 </head>
 <body>
     <header>
@@ -74,7 +75,11 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" value="Procesar"></td>
+                    <td>
+                        <div id="main">
+                        <button class="boton">Procesar</button>
+                        </div>
+                    </td>
                 </tr>
                 <?php
                     $pagoProducto = 0;
