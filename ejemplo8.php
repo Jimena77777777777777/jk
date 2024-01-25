@@ -55,17 +55,33 @@
         $i++;
     }
 /**listar los  n primeros elemntos de la siguiente serie: 1/2, 3/4, 5/6, ..... */
-echo "<br>";
+$n=20;
 $i=1;
-$n = 10;
-while ($i <= $n) {
-    if ($i%2==0) {
-        echo $i." ";
+$num=1;
+$den=2;
+while($i<=$n){
+    echo $num."/".$den."<br>";
+    $num+=2;
+    $den+=2;
+    $i++;
+}
+
+/**lista los n primeroooos...... 1/5,-2/10,3/15 */
+$n=20;
+$i=1;
+$num=1;
+$den=5;
+
+    while($i<=$n){
+        if($i % 2 !=0){
+            echo $num. "/".$den. "<br>";
+        }else{
+            echo"-".$num."/".$den. "<br>";
+        }
+    $num+=1;
+    $den+=5;
+    $i++;
     }
-    $i++;}
-
-
-
 ?>
 
 
