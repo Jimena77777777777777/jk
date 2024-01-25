@@ -57,6 +57,7 @@
                     <td>Producto: </td>
                     <td>
                         <select name="selProducto">
+                            <option value="Cocina de 6 hornillas" <?php echo $selCocina6hornillas; ?>>Cocina 6 hornillas </option>
                             <option value="Cocina" <?php echo $selCocina; ?>>Cocina</option>
                             <option value="Refrigeradora" <?php echo $selRefrigeradora; ?>>Refrigeradora</option>
                             <option value="Television" <?php echo $selTelevision; ?>>Television</option>
@@ -72,8 +73,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Procesar"></td>
                     <td></td>
+                    <td><input type="submit" value="Procesar"></td>
                 </tr>
                 <?php
                     $pagoProducto = 0;
