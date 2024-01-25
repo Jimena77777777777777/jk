@@ -33,6 +33,26 @@
 }
 
 
+.alinear_Flex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
+
+body{
+    font-family:sans-serif;
+}
+.contenedor{
+    background-color: palevioletred ;
+    height: 50vh;
+    margin: 6%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
 
 
