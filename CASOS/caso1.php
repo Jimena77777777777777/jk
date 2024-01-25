@@ -1,106 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea uwu</title>
-    <link rel="stylesheet" href="estilo.css"> 
+    <title>Caso desarrollado 01</title>
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
-        <h3>PAGO DE EMPLEADOS</h3>
+        <h3>CASA DE CAMBIOS</h3>
     </header>
     <section>
-        <form action="">
-            <table border="0" cellspacing = "0" align="center" cellspadding ="0">
+        <?php
+            $soles = 0;
+            $dolares = 0;
+            $euros = 0;
+        ?>
+        <form action="caso1.php" method="get">
+            <table border="0" cellspacing="0" cellpading="0">
                 <tr>
-                    <td>Empelado</td>
-                    <td><input type="text" name="txtEmpleado"></td>
+                    <td>Monto en soles: </td>
+                    <td>
+                        <input type="text" name="txtSoles" value=
+                            <?php
+                                echo $soles;
+                            ?>
+                        >
+                    </td>
                 </tr>
                 <tr>
-                    <td>Horas trabajadas</td>
-                    <td><input type="text" name="txtHoras"></td>
+                    <td>Monto en dolares: </td>
+                    <td>
+                        <input type="text" name="txtDolares" value=
+                            <?php
+                                echo $dolares;
+                            ?>
+                        >
+                    </td>
                 </tr>
                 <tr>
-                    <td>Tarifa por Hora</td>
-                    <td><input type="text" name="txtTarifa"></td>
+                    <td>Monto en Euros: </td>
+                    <td>
+                        <input type="text" name="txtEuros" value=
+                            <?php
+                                echo $euros;
+                            ?>
+                        >
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td><input type="submit"> <input type="reset"></td>
+                    <td>
+                        <input type="submit" value="Procesar">
+                    </td>
+                    <td>
+                        <input type="reset" value="Limpiar">
+                    </td>
                 </tr>
                 <?php
-                error_reporting(0);//no te mande errores antes de la ejecución
-                $empleado = $_GET['txtEmpleado'];
-                $horas = $_GET['txtHoras'];
-                $tarifa = $_GET['txtTarifa'];
-
-                //sueldo bruto
-                $sueldo = $horas * $tarifa;
-                define ("RMV",1025);
-                
-                //essalud
-                //si el empleado gana la RMV 1025 solo en esos casos aplica
-                //afp 
-                //sueldo neto sueldo bruto - essalud - afp
-
-
-
+                    error_reporting(0);
+                    $soles = $_GET['txtSoles'];
+                    $dolares = $_GET['txtDolares'];
+                    $euros = $_GET['txtEuros'];
                 ?>
                 <tr>
-                    <td>Empleado</td>
+                    <td>Total soles: </td>
                     <td>
                         <?php
-                        echo $empleado;
+                            printf("%.2f SOLES",$soles);
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>horas trabajadas</td>
+                    <td>Total dolares: </td>
                     <td>
                         <?php
-                        echo $horas;
+                            define("DOLAR", 3.71);
+                            $dolar = $soles / DOLAR;
+                            printf("%.2f DOLARES",$dolar);
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>Tarifa por hora</td>
+                    <td>Total euros: </td>
                     <td>
-                        <?php
-                        echo $tarifa;
-                        ?>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>Sueldo bruto</td>
-                    <td>
-                        <?php
-                        echo "S/.".$sueldo;
+                    <?php
+                            define("EURO", 4.05);
+                            $euro = $soles / EURO;
+                            printf("%.2f EUROS",$euro);
                         ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>Descuento Essalud</td>
+                    <td></td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td>descuento AFP</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>Sueldo Neto</td>
-                    <td></td>
-                </tr>
-                
 
             </table>
         </form>
     </section>
-
-    
     <footer>
-        <h6>Wendy te engaño xd ahhahahhahah</h6>
+        <h6>Todos los derechos reservados @Eduardo</h6>
     </footer>
 </body>
+
 </html>
