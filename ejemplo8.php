@@ -82,6 +82,30 @@ $den=5;
     $den+=5;
     $i++;
     }
+/**
+ * ESTRUCTURA REPETITIVA    FOR
+ * for(inicializacion;condicion;incremento){
+ * instrucciones a repetir
+ * }
+ */
+
+    for ($i=10,$i>=1;$i--){
+        echo $i."<br>";
+    }
+/**anidacion de estructuras repetivias */
+
+$n = 10;
+$i = 1;
+while ($i <= $n) {
+  $j = 1;
+  while ($j <= $i) {
+      echo $i;
+      $j++;
+  }
+  echo "<br>";
+  $i++;
+}
+
 ?>
 
 
