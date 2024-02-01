@@ -222,7 +222,7 @@
     </section>
     <br>
     <footer>
-    <h6>HectorFD Copyright © 2024, todos los derechos reservados </h6>
+    <h6>GRUPO PHP IF </h6>
     </footer>
     <script src="../html/js/script.js"></script>
 </body>
