@@ -89,9 +89,10 @@ $den=5;
  * }
  */
 
-    for ($i=10,$i>=1;$i--){
-        echo $i."<br>";
-    }
+ for ($i=10; $i>=1; $i--) { 
+    echo $i."<br>";}   
+
+
 /**anidacion de estructuras repetivias */
 
 $n = 10;
@@ -105,6 +106,10 @@ while ($i <= $n) {
   echo "<br>";
   $i++;
 }
+
+/**
+ * mostrar en pantalla todos los numeros pares comprendidos 
+ */
 
 ?>
 
