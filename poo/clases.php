@@ -52,7 +52,7 @@ echo $persona2-> nombre. "<br>"."tiene ".$persona2->edad."años";
 /////////////////////////////////////////////////////////////////////
 //crear una clase automovil
 
-/*
+
 class Automovil{
     public $marca;
     public $modelo;
@@ -76,7 +76,7 @@ $auto2 -> color="Negro";
 $auto2 -> tip_combustible="Petroleo";
 
 echo $auto1->  marca."<br>". " Modelo : ".   $auto1 -> modelo ."<br>". " Placa : ".  $auto1 -> placa. "<br>"."Color : ". $auto1 -> color. "<br>"."Tipo de combustible: ".  $auto1 -> tip_combustible
-*/
+
 ///////////////////////////////////////////////////////////////////////////////////
 
 class Persona{
