@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Funciones Numéricas</title>
+    <title>F.N</title>
     <script>
         function mostrarCajaTexto() {
             var funcionSeleccionada = document.getElementById("funcion").value;
@@ -19,9 +19,16 @@
     </script>
 </head>
 <body>
-
+<header>
+    <h3>FUNCIONES NUMERICAS</h3>
+</header> 
 <?php
 function ejecutarFuncion($variable, $funcion, $valoresAdicionales = []) {
+    if (!is_numeric($variable)) {
+        echo "<p>La variable ingresada no es numérica.</p>";
+        return null;
+    }
+
     switch ($funcion) {
         case 'exp':
             $result = exp($variable);
@@ -49,13 +56,13 @@ function ejecutarFuncion($variable, $funcion, $valoresAdicionales = []) {
             return $result;
     
         case 'max':
-            $result = max($variable, 0);
-            echo "La función max devuelve el valor más grande entre $variable y 0.";
+            $result = max($variable, ...$valoresAdicionales);
+            echo "La función max devuelve el valor más grande entre $variable y " . implode(", ", $valoresAdicionales) . ".";
             return $result;
     
         case 'min':
-            $result = min($variable, 0);
-            echo "La función min devuelve el valor más pequeño entre $variable y 0.";
+            $result = min($variable, ...$valoresAdicionales);
+            echo "La función min devuelve el valor más pequeño entre $variable y " . implode(", ", $valoresAdicionales) . ".";
             return $result;
     
         case 'mt_rand':
@@ -107,7 +114,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
     <label for="variable">Ingrese una variable:</label>
-    <input type="text" name="variable" id="variable" required>
+    <input type="text" name="variable" id="variable" <?php echo ($_POST["funcion"] === 'min' || $_POST["funcion"] === 'max') ? 'disabled' : ''; ?> required>
 
     <label for="funcion">Seleccione una función:</label>
     <select name="funcion" id="funcion" onchange="mostrarCajaTexto()" required>
